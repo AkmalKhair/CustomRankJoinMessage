@@ -1,0 +1,8 @@
+name: CustomRankJoinMessage
+main: AkmalKhair\CustomRankJoinMessage\Main
+version: 2.0.0
+api: [5.0.0]
+author: AkmalKhair
+depend:
+- RankSystem
+description: Custom rank join message plugin for PMMP.

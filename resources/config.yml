@@ -1,0 +1,5 @@
+join-messages:
+  King: "Hormat! Raja {player} telah tiba di istana!"
+
+leave-messages:
+  King: "Raja {player} telah meninggalkan aula."
