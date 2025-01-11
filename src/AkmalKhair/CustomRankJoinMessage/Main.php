@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 namespace AkmalKhair\CustomRankJoinMessage;
@@ -29,7 +28,7 @@ class Main extends PluginBase implements Listener {
         $session = RankSystem::getInstance()->getSessionManager()->get($player->getName());
         $event->setJoinMessage("");
         $session->onInitialize(function() use ($player, $session) {
-            $rank = Utils::ranks2string($session->getRanks()) ?? "";
+            $rank = Utils::ranks2string($session->getRanks());
             $customMessage = $this->joinMessages[$rank] ?? "Welcome to the kingdom, {player}!";
             $customMessage = str_replace("{player}", $player->getName(), $customMessage);
             Server::getInstance()->broadcastMessage($customMessage);
@@ -40,7 +39,7 @@ class Main extends PluginBase implements Listener {
         $session = RankSystem::getInstance()->getSessionManager()->get($player->getName());
         $event->setQuitMessage("");
         $session->onInitialize(function() use ($player, $session) {
-            $rank = Utils::ranks2string($session->getRanks()) ?? "";
+            $rank = Utils::ranks2string($session->getRanks());
             $customMessage = $this->leaveMessages[$rank] ?? "Farewell, {player}. May your journey be safe.";
             $customMessage = str_replace("{player}", $player->getName(), $customMessage);
             Server::getInstance()->broadcastMessage($customMessage);
