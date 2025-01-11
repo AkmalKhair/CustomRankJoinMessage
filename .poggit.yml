@@ -5,4 +5,5 @@ branches:
 projects:
   CustomRankJoinMessage:
     path: ""
+    icon: "icon.png"
 ...
